@@ -1,0 +1,11 @@
+//闭包内存释放
+function f1(){
+        var a=5;
+        return function(){
+            a++;
+            console.log(a);
+        }
+ }
+ var q1=f1();
+ //释放q1
+ q1 = null;
