@@ -1,0 +1,17 @@
+//判断选择器类型（id,class,标签,其他）
+/*test方法（正则方法）r.test(String);r代表正则表达式，String代表字符串。
+	"."在正则中有含义(小数点默认匹配除换行符之外的任何单个字符。),在正则中用\.代表普通"."符号
+	\D代表非数字字符，相当于[^0-9]
+	"*"代表匹配前一个表达式 0 次或多次，相当于{0, }
+*/
+function $(selector){
+	if(/^#\D[a-zA-Z0-9]*$/.test(selector)){
+		console.log('id选择器');
+	}else if(/^\.\D[a-zA-Z0-9]*$/.test(selector)){
+		console.log('class选择器');
+	}else if(/^\D[a-zA-Z]*$/.test(selector)){
+		console.log('标签选择器');
+	}else {
+		console.log('其他选择器');
+	}
+}
