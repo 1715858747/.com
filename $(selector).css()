@@ -14,6 +14,8 @@
       this.ele.style[attr] = value;
     }
   }
+  obj.$ = obj.jQuery = jQuery;
+  
 })(window)
 
 //方式二
@@ -31,6 +33,8 @@
       this.ele.style[attr] = value;
     }
   }
+  obj.$ = obj.jQuery = jQuery;
+  
 })(window)
 
 //访问方式：$().css();
