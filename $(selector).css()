@@ -1,0 +1,36 @@
+//通过原生JavaScript实现JQuery中的$('div').css('color','red');效果
+//方式一
+(function(obj){
+  function jQuery(selector){
+    //通过selector选择器找到元素document.querySelector(selector);
+    return new setStyle(ele);//ele元素
+  }
+  
+  function setStyle(ele){
+    this.ele = ele;
+  }
+  setStyle.prototype = {
+    css: function(attr,value){
+      this.ele.style[attr] = value;
+    }
+  }
+})(window)
+
+//方式二
+((obj)=>{
+  function jQuery(selector){
+    //通过selector选择器找到元素document.querySelector(selector);
+    return new setStyle(ele);//ele元素
+  }
+  
+  function setStyle(ele){
+    this.ele = ele;
+  }
+  setStyle.prototype = {
+    css: (attr,value)=>{
+      this.ele.style[attr] = value;
+    }
+  }
+})(window)
+
+//访问方式：$().css();
